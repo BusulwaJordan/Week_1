@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Mathematics - MathGenius Uganda</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/practice.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="practice-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-calculator"></i>
+                <span>MathGenius Uganda</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="progress.html" class="nav-link">Progress</a></li>
+                <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+                <li><a href="help.html" class="nav-link">Help</a></li>
+            </ul>
+            <div class="nav-user">
+                <div class="user-score">
+                    <i class="fas fa-star"></i>
+                    <span id="userPoints">0</span>
+                </div>
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Practice Header -->
+    <section class="practice-header">
+        <div class="container">
+            <div class="practice-info">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="dashboard.html">Dashboard</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span id="currentTopic">Practice</span>
+                </div>
+                <h1 id="practiceTitle">Mathematics Practice</h1>
+                <p id="practiceDescription">Choose your practice mode and start learning!</p>
+            </div>
+            <div class="practice-stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="questionsAnswered">0</div>
+                    <div class="stat-label">Questions Answered</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="correctAnswers">0</div>
+                    <div class="stat-label">Correct Answers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="accuracy">0%</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="timeSpent">0m</div>
+                    <div class="stat-label">Time Spent</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mode Selection -->
+    <section id="modeSelection" class="mode-selection">
+        <div class="container">
+            <h2>Choose Your Practice Mode</h2>
+            <div class="modes-grid">
+                <div class="mode-card" data-mode="quick">
+                    <div class="mode-icon">
+                        <i class="fas fa-zap"></i>
+                    </div>
+                    <h3>Quick Practice</h3>
+                    <p>10-15 random questions for quick skill building</p>
+                    <div class="mode-details">
+                        <span><i class="fas fa-clock"></i> 5-10 minutes</span>
+                        <span><i class="fas fa-question-circle"></i> 10-15 questions</span>
+                    </div>
+                    <button class="btn btn-primary">Start Quick Practice</button>
+                </div>
+                
+                <div class="mode-card" data-mode="topic">
+                    <div class="mode-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Topic Practice</h3>
+                    <p>Focus on specific mathematical topics</p>
+                    <div class="mode-details">
+                        <span><i class="fas fa-clock"></i> 15-30 minutes</span>
+                        <span><i class="fas fa-question-circle"></i> 20-50 questions</span>
+                    </div>
+                    <button class="btn btn-primary">Choose Topic</button>
+                </div>
+                
+                <div class="mode-card" data-mode="timed">
+                    <div class="mode-icon">
+                        <i class="fas fa-stopwatch"></i>
+                    </div>
+                    <h3>Timed Challenge</h3>
+                    <p>Test your speed and accuracy under time pressure</p>
+                    <div class="mode-details">
+                        <span><i class="fas fa-clock"></i> 10 minutes</span>
+                        <span><i class="fas fa-question-circle"></i> As many as possible</span>
+                    </div>
+                    <button class="btn btn-primary">Start Challenge</button>
+                </div>
+                
+                <div class="mode-card" data-mode="exam">
+                    <div class="mode-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Mock Exam</h3>
+                    <p>Full-length practice tests to prepare for exams</p>
+                    <div class="mode-details">
+                        <span><i class="fas fa-clock"></i> 45-60 minutes</span>
+                        <span><i class="fas fa-question-circle"></i> 40-60 questions</span>
+                    </div>
+                    <button class="btn btn-primary">Take Mock Exam</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic Selection -->
+    <section id="topicSelection" class="topic-selection hidden">
+        <div class="container">
+            <div class="section-header">
+                <h2>Select a Topic</h2>
+                <p>Choose the mathematical topic you want to practice</p>
+            </div>
+            
+            <div class="grade-tabs">
+                <button class="grade-tab active" data-grade="6">Primary 6</button>
+                <button class="grade-tab" data-grade="7">Primary 7</button>
+            </div>
+            
+            <div class="topics-container">
+                <div id="grade6Topics" class="topics-grid active">
+                    <div class="topic-item" data-topic="numbers-p6">
+                        <div class="topic-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Numbers & Operations</h3>
+                        <p>Whole numbers, fractions, decimals, and basic operations</p>
+                        <div class="topic-stats">
+                            <span class="questions-count">180 questions</span>
+                            <span class="difficulty">Easy - Medium</span>
+                        </div>
+                        <button class="btn btn-primary">Practice Now</button>
+                    </div>
+                    
+                    <div class="topic-item" data-topic="measurement-p6">
+                        <div class="topic-icon">
+                            <i class="fas fa-ruler"></i>
+                        </div>
+                        <h3>Measurement</h3>
+                        <p>Length, mass, capacity, time, money, and temperature</p>
+                        <div class="topic-stats">
+                            <span class="questions-count">150 questions</span>
+                            <span class="difficulty">Easy - Medium</span>
+                        </div>
+                        <button class="btn btn-primary">Practice Now</button>
+                    </div>
+                    
+                    <div class="topic-item" data-topic="geometry-p6">
+                        <div class="topic-icon">
+                            <i class="fas fa-shapes"></i>
+                        </div>
+                        <h3>Geometry</h3>
+                        <p>2D shapes, angles, symmetry, and basic constructions</p>
+                        <div class="topic-stats">
+                            <span class="questions-count">140 questions</span>
+                            <span class="difficulty">Easy - Medium</span>
+                        </div>
+                        <button class="btn btn-primary">Practice Now</button>
+                    </div>
+                    
+                    <div class="topic-item" data-topic="data-p6">
+                        <div class="topic-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Data Handling</h3>
+                        <p>Tables, graphs, charts, and basic statistics</p>
+                        <div class="topic-stats">
+                            <span class="questions-count">120 questions</span>
+                            <span class="difficulty">Easy - Medium</span>
+                        </div>
+                        <button class="btn btn-primary">Practice Now</button>
+                    </div>
+                    
+                    <div class="topic-item" data-topic="problem-solving-p6">
+                        <div class="topic-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h3>Problem Solving</h3>
+                        <p>Word problems and mathematical reasoning</p>
+                        <div class="topic-stats">
+                            <span class="questions-count">110 questions</span>
+                            <span class="difficulty">Medium</span>
+                        </div>
+                        <button class="btn btn-primary">Practice Now</button>
+                    </div>
+                    
+                    <div class="topic-item" data-topic="ratio-p6">
+                        <div class="topic-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <h3>Ratio & Proportion</h3>
+                        <p>Basic ratios, proportions, and percentages</p>
+                        <div class="topic-stats">
+                            <span class="questions-count">100 questions</span>
+                            <span class="difficulty">Medium</span>
+                        </div>
+                        <button class="btn btn-primary">Practice Now</button>
+                    </div>
+                </div>
+                
+                <div id="grade7Topics" class="topics-grid">
+                    <div class="topic-item" data-topic="advanced-numbers-p7">
+                        <div class="topic-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Advanced Numbers</h3>
+                        <p>Complex operations, directed numbers, and number patterns</p>
+                        <div class="topic-stats">
+                            <span class="questions-count">200 questions</span>
+                            <span class="difficulty">Medium - Hard</span>
+                        </div>
+                        <button class="btn btn-primary">Practice Now</button>
+                    </div>
+                    
+                    <div class="topic-item" data-topic="algebra-p7">
+                        <div class="topic-icon">
+                            <i class="fas fa-square-root-alt"></i>
+                        </div>
+                        <h3>Algebra Basics</h3>
+                        <p>Introduction to algebraic expressions and simple equations</p>
+                        <div class="topic-stats">
+                            <span class="questions-count">160 questions</span>
+                            <span class="difficulty">Medium - Hard</span>
+                        </div>
+                        <button class="btn btn-primary">Practice Now</button>
+                    </div>
+                    
+                    <div class="topic-item" data-topic="3d-geometry-p7">
+                        <div class="topic-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3>3D Geometry</h3>
+                        <p>Volume, surface area, and 3D shape properties</p>
+                        <div class="topic-stats">
+                            <span class="questions-count">180 questions</span>
+                            <span class="difficulty">Medium - Hard</span>
+                        </div>
+                        <button class="btn btn-primary">Practice Now</button>
+                    </div>
+                    
+                    <div class="topic-item" data-topic="statistics-p7">
+                        <div class="topic-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Advanced Statistics</h3>
+                        <p>Mean, median, mode, and probability basics</p>
+                        <div class="topic-stats">
+                            <span class="questions-count">150 questions</span>
+                            <span class="difficulty">Medium - Hard</span>
+                        </div>
+                        <button class="btn btn-primary">Practice Now</button>
+                    </div>
+                    
+                    <div class="topic-item" data-topic="financial-p7">
+                        <div class="topic-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h3>Financial Mathematics</h3>
+                        <p>Interest, profit & loss, and practical applications</p>
+                        <div class="topic-stats">
+                            <span class="questions-count">140 questions</span>
+                            <span class="difficulty">Medium - Hard</span>
+                        </div>
+                        <button class="btn btn-primary">Practice Now</button>
+                    </div>
+                    
+                    <div class="topic-item" data-topic="advanced-problem-solving-p7">
+                        <div class="topic-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Advanced Problem Solving</h3>
+                        <p>Complex word problems and critical thinking</p>
+                        <div class="topic-stats">
+                            <span class="questions-count">170 questions</span>
+                            <span class="difficulty">Hard</span>
+                        </div>
+                        <button class="btn btn-primary">Practice Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="topic-actions">
+                <button id="backToModes" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Modes
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Interface -->
+    <section id="practiceInterface" class="practice-interface hidden">
+        <div class="container">
+            <div class="practice-controls">
+                <div class="control-left">
+                    <button id="pausePractice" class="btn btn-outline">
+                        <i class="fas fa-pause"></i>
+                        Pause
+                    </button>
+                    <button id="quitPractice" class="btn btn-outline">
+                        <i class="fas fa-times"></i>
+                        Quit
+                    </button>
+                </div>
+                <div class="control-center">
+                    <div class="question-counter">
+                        Question <span id="currentQuestion">1</span> of <span id="totalQuestions">10</span>
+                    </div>
+                    <div class="progress-indicator">
+                        <div class="progress-bar">
+                            <div id="questionProgress" class="progress-fill" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-right">
+                    <div id="timerDisplay" class="timer">
+                        <i class="fas fa-clock"></i>
+                        <span id="timeRemaining">10:00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-type" id="questionType">Addition</span>
+                        <span class="question-difficulty" id="questionDifficulty">Easy</span>
+                    </div>
+                    
+                    <div class="question-content">
+                        <div class="question-text" id="questionText">
+                            What is 25 + 17?
+                        </div>
+                        
+                        <div class="question-image" id="questionImage" style="display: none;">
+                            <!-- Dynamic image content -->
+                        </div>
+                        
+                        <div class="question-options" id="questionOptions">
+                            <!-- Multiple choice options will be inserted here -->
+                        </div>
+                        
+                        <div class="question-input" id="questionInput" style="display: none;">
+                            <input type="number" id="answerInput" placeholder="Enter your answer" autocomplete="off">
+                        </div>
+                    </div>
+                    
+                    <div class="question-actions">
+                        <button id="submitAnswer" class="btn btn-primary btn-large">
+                            <i class="fas fa-check"></i>
+                            Submit Answer
+                        </button>
+                        <button id="skipQuestion" class="btn btn-outline">
+                            <i class="fas fa-forward"></i>
+                            Skip
+                        </button>
+                        <button id="hintButton" class="btn btn-outline">
+                            <i class="fas fa-lightbulb"></i>
+                            Hint
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Answer Feedback -->
+                <div id="answerFeedback" class="answer-feedback hidden">
+                    <div class="feedback-content">
+                        <div class="feedback-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="feedback-title">Correct!</h3>
+                        <p class="feedback-message">Great job! You got it right.</p>
+                        <div class="feedback-explanation">
+                            <h4>Explanation:</h4>
+                            <p id="explanationText">25 + 17 = 42</p>
+                        </div>
+                        <button id="nextQuestion" class="btn btn-primary">
+                            <i class="fas fa-arrow-right"></i>
+                            Next Question
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="practiceResults" class="practice-results hidden">
+        <div class="container">
+            <div class="results-card">
+                <div class="results-header">
+                    <div class="results-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h2>Practice Complete!</h2>
+                    <p>Here's how you performed</p>
+                </div>
+                
+                <div class="results-stats">
+                    <div class="result-stat">
+                        <div class="stat-value" id="finalScore">0</div>
+                        <div class="stat-label">Final Score</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="stat-value" id="finalAccuracy">0%</div>
+                        <div class="stat-label">Accuracy</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="stat-value" id="finalTime">0m 0s</div>
+                        <div class="stat-label">Time Taken</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="stat-value" id="pointsEarned">+0</div>
+                        <div class="stat-label">Points Earned</div>
+                    </div>
+                </div>
+                
+                <div class="results-breakdown">
+                    <h3>Question Breakdown</h3>
+                    <div class="breakdown-stats">
+                        <div class="breakdown-item correct">
+                            <i class="fas fa-check"></i>
+                            <span>Correct: <strong id="correctCount">0</strong></span>
+                        </div>
+                        <div class="breakdown-item incorrect">
+                            <i class="fas fa-times"></i>
+                            <span>Incorrect: <strong id="incorrectCount">0</strong></span>
+                        </div>
+                        <div class="breakdown-item skipped">
+                            <i class="fas fa-forward"></i>
+                            <span>Skipped: <strong id="skippedCount">0</strong></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-actions">
+                    <button id="practiceAgain" class="btn btn-primary btn-large">
+                        <i class="fas fa-redo"></i>
+                        Practice Again
+                    </button>
+                    <button id="viewProgress" class="btn btn-outline">
+                        <i class="fas fa-chart-line"></i>
+                        View Progress
+                    </button>
+                    <button id="backToDashboard" class="btn btn-outline">
+                        <i class="fas fa-home"></i>
+                        Dashboard
+                    </button>
+                </div>
+                
+                <div class="achievements-earned" id="achievementsEarned" style="display: none;">
+                    <h3>New Achievements!</h3>
+                    <div class="achievement-list" id="achievementList">
+                        <!-- Achievement badges will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pause Modal -->
+    <div id="pauseModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Practice Paused</h3>
+                <button class="modal-close" id="closePauseModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Take a break! Your progress has been saved.</p>
+                <div class="pause-stats">
+                    <div class="pause-stat">
+                        <span class="label">Questions Answered:</span>
+                        <span class="value" id="pauseQuestionsAnswered">0</span>
+                    </div>
+                    <div class="pause-stat">
+                        <span class="label">Accuracy:</span>
+                        <span class="value" id="pauseAccuracy">0%</span>
+                    </div>
+                    <div class="pause-stat">
+                        <span class="label">Time Elapsed:</span>
+                        <span class="value" id="pauseTimeElapsed">0m 0s</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button id="resumePractice" class="btn btn-primary">
+                    <i class="fas fa-play"></i>
+                    Resume
+                </button>
+                <button id="quitFromPause" class="btn btn-outline">
+                    <i class="fas fa-stop"></i>
+                    Quit Practice
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/practice.js"></script>
+    <script src="js/questions.js"></script>
+</body>
+</html>

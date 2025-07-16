@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathGenius Uganda - Primary 6 & 7 Mathematics Made Easy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-calculator"></i>
+                <span>MathGenius Uganda</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#topics" class="nav-link">Topics</a></li>
+                <li><a href="#practice" class="nav-link">Practice</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Revolutionize Your <span class="highlight">Mathematics</span> Learning Journey
+                </h1>
+                <p class="hero-subtitle">
+                    Master Primary 6 & 7 Mathematics with Uganda's most comprehensive, engaging, and interactive learning platform. Over 2000+ practice questions await you!
+                </p>
+                <div class="hero-buttons">
+                    <a href="dashboard.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-rocket"></i>
+                        Start Learning Now
+                    </a>
+                    <a href="#features" class="btn btn-outline btn-large">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">2000+</div>
+                        <div class="stat-label">Practice Questions</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Math Topics</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Uganda Curriculum</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="math-animation">
+                    <div class="floating-element" data-delay="0">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="floating-element" data-delay="1">
+                        <i class="fas fa-minus"></i>
+                    </div>
+                    <div class="floating-element" data-delay="2">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="floating-element" data-delay="3">
+                        <i class="fas fa-divide"></i>
+                    </div>
+                    <div class="floating-element" data-delay="4">
+                        <i class="fas fa-equals"></i>
+                    </div>
+                    <div class="floating-element" data-delay="5">
+                        <i class="fas fa-square-root-alt"></i>
+                    </div>
+                    <div class="floating-element" data-delay="6">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <div class="hero-illustration">
+                        <img src="images/math-student.svg" alt="Student learning mathematics" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose MathGenius Uganda?</h2>
+                <p>Discover the powerful features that make mathematics learning fun, effective, and engaging for Primary 6 & 7 students</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Adaptive Learning</h3>
+                    <p>Our AI-powered system adapts to your learning pace and style, ensuring personalized education for every student.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Gamified Experience</h3>
+                    <p>Learn through fun games, challenges, and interactive activities that make mathematics exciting and engaging.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor your improvement with detailed analytics and progress reports that show your mathematical growth.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaborative Learning</h3>
+                    <p>Connect with classmates, participate in group challenges, and learn together in a supportive community.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Access your lessons anywhere, anytime with our responsive design that works on all devices.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Achievement System</h3>
+                    <p>Earn badges, certificates, and rewards as you master different mathematical concepts and skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section id="topics" class="topics">
+        <div class="container">
+            <div class="section-header">
+                <h2>Master Every Topic</h2>
+                <p>Comprehensive coverage of Primary 6 & 7 Mathematics according to the Uganda National Curriculum</p>
+            </div>
+            <div class="topics-nav">
+                <button class="topic-tab active" data-target="primary6">Primary 6</button>
+                <button class="topic-tab" data-target="primary7">Primary 7</button>
+            </div>
+            <div class="topics-content">
+                <div id="primary6" class="topic-content active">
+                    <div class="topics-grid">
+                        <div class="topic-card">
+                            <div class="topic-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h3>Numbers & Operations</h3>
+                            <p>Master whole numbers, fractions, decimals, and basic operations</p>
+                            <div class="topic-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span>0/180 questions</span>
+                            </div>
+                            <a href="practice.html?topic=numbers-p6" class="btn btn-primary">Start Practice</a>
+                        </div>
+                        <div class="topic-card">
+                            <div class="topic-icon">
+                                <i class="fas fa-ruler"></i>
+                            </div>
+                            <h3>Measurement</h3>
+                            <p>Length, mass, capacity, time, money, and temperature</p>
+                            <div class="topic-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span>0/150 questions</span>
+                            </div>
+                            <a href="practice.html?topic=measurement-p6" class="btn btn-primary">Start Practice</a>
+                        </div>
+                        <div class="topic-card">
+                            <div class="topic-icon">
+                                <i class="fas fa-shapes"></i>
+                            </div>
+                            <h3>Geometry</h3>
+                            <p>2D shapes, angles, symmetry, and basic constructions</p>
+                            <div class="topic-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span>0/140 questions</span>
+                            </div>
+                            <a href="practice.html?topic=geometry-p6" class="btn btn-primary">Start Practice</a>
+                        </div>
+                        <div class="topic-card">
+                            <div class="topic-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h3>Data Handling</h3>
+                            <p>Tables, graphs, charts, and basic statistics</p>
+                            <div class="topic-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span>0/120 questions</span>
+                            </div>
+                            <a href="practice.html?topic=data-p6" class="btn btn-primary">Start Practice</a>
+                        </div>
+                        <div class="topic-card">
+                            <div class="topic-icon">
+                                <i class="fas fa-puzzle-piece"></i>
+                            </div>
+                            <h3>Problem Solving</h3>
+                            <p>Word problems and mathematical reasoning</p>
+                            <div class="topic-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span>0/110 questions</span>
+                            </div>
+                            <a href="practice.html?topic=problem-solving-p6" class="btn btn-primary">Start Practice</a>
+                        </div>
+                        <div class="topic-card">
+                            <div class="topic-icon">
+                                <i class="fas fa-percentage"></i>
+                            </div>
+                            <h3>Ratio & Proportion</h3>
+                            <p>Basic ratios, proportions, and percentages</p>
+                            <div class="topic-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span>0/100 questions</span>
+                            </div>
+                            <a href="practice.html?topic=ratio-p6" class="btn btn-primary">Start Practice</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="primary7" class="topic-content">
+                    <div class="topics-grid">
+                        <div class="topic-card">
+                            <div class="topic-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h3>Advanced Numbers</h3>
+                            <p>Complex operations, directed numbers, and number patterns</p>
+                            <div class="topic-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span>0/200 questions</span>
+                            </div>
+                            <a href="practice.html?topic=advanced-numbers-p7" class="btn btn-primary">Start Practice</a>
+                        </div>
+                        <div class="topic-card">
+                            <div class="topic-icon">
+                                <i class="fas fa-square-root-alt"></i>
+                            </div>
+                            <h3>Algebra Basics</h3>
+                            <p>Introduction to algebraic expressions and simple equations</p>
+                            <div class="topic-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span>0/160 questions</span>
+                            </div>
+                            <a href="practice.html?topic=algebra-p7" class="btn btn-primary">Start Practice</a>
+                        </div>
+                        <div class="topic-card">
+                            <div class="topic-icon">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <h3>3D Geometry</h3>
+                            <p>Volume, surface area, and 3D shape properties</p>
+                            <div class="topic-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span>0/180 questions</span>
+                            </div>
+                            <a href="practice.html?topic=3d-geometry-p7" class="btn btn-primary">Start Practice</a>
+                        </div>
+                        <div class="topic-card">
+                            <div class="topic-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Advanced Statistics</h3>
+                            <p>Mean, median, mode, and probability basics</p>
+                            <div class="topic-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span>0/150 questions</span>
+                            </div>
+                            <a href="practice.html?topic=statistics-p7" class="btn btn-primary">Start Practice</a>
+                        </div>
+                        <div class="topic-card">
+                            <div class="topic-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <h3>Financial Mathematics</h3>
+                            <p>Interest, profit & loss, and practical applications</p>
+                            <div class="topic-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span>0/140 questions</span>
+                            </div>
+                            <a href="practice.html?topic=financial-p7" class="btn btn-primary">Start Practice</a>
+                        </div>
+                        <div class="topic-card">
+                            <div class="topic-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Advanced Problem Solving</h3>
+                            <p>Complex word problems and critical thinking</p>
+                            <div class="topic-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span>0/170 questions</span>
+                            </div>
+                            <a href="practice.html?topic=advanced-problem-solving-p7" class="btn btn-primary">Start Practice</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Section -->
+    <section id="practice" class="practice-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ready to Practice?</h2>
+                <p>Choose your learning mode and start mastering mathematics today!</p>
+            </div>
+            <div class="practice-modes">
+                <div class="practice-card">
+                    <div class="practice-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <h3>Quick Practice</h3>
+                    <p>Jump into 10-15 random questions for quick skill building</p>
+                    <a href="practice.html?mode=quick" class="btn btn-primary">Start Quick Practice</a>
+                </div>
+                <div class="practice-card">
+                    <div class="practice-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Topic Mastery</h3>
+                    <p>Deep dive into specific topics with comprehensive practice</p>
+                    <a href="practice.html?mode=mastery" class="btn btn-primary">Choose Topic</a>
+                </div>
+                <div class="practice-card">
+                    <div class="practice-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Timed Challenge</h3>
+                    <p>Test your speed and accuracy with time-based challenges</p>
+                    <a href="practice.html?mode=timed" class="btn btn-primary">Start Challenge</a>
+                </div>
+                <div class="practice-card">
+                    <div class="practice-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Mock Exam</h3>
+                    <p>Prepare for exams with full-length practice tests</p>
+                    <a href="practice.html?mode=exam" class="btn btn-primary">Take Mock Exam</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Success Stories</h2>
+                <p>See how MathGenius Uganda is transforming mathematics education</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <p>"My daughter's math scores improved by 40% in just 3 months! The interactive lessons and colorful interface keep her engaged for hours."</p>
+                        <div class="testimonial-author">
+                            <img src="images/parent1.jpg" alt="Parent">
+                            <div>
+                                <h4>Mrs. Nakamya Sarah</h4>
+                                <span>Parent, Kampala</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"As a teacher, I've seen remarkable improvement in my P6 students since introducing MathGenius. The platform aligns perfectly with our curriculum."</p>
+                        <div class="testimonial-author">
+                            <img src="images/teacher1.jpg" alt="Teacher">
+                            <div>
+                                <h4>Mr. Okello Denis</h4>
+                                <span>Mathematics Teacher, Mbarara</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"I used to hate mathematics, but MathGenius made it fun! Now I'm the top student in my P7 class and I love solving problems."</p>
+                        <div class="testimonial-author">
+                            <img src="images/student1.jpg" alt="Student">
+                            <div>
+                                <h4>Aisha Namukwaya</h4>
+                                <span>Primary 7 Student, Jinja</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-nav">
+                <button class="testimonial-dot active" data-slide="0"></button>
+                <button class="testimonial-dot" data-slide="1"></button>
+                <button class="testimonial-dot" data-slide="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Math Journey?</h2>
+                <p>Join thousands of students who are already mastering mathematics with MathGenius Uganda</p>
+                <div class="cta-buttons">
+                    <a href="register.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-user-plus"></i>
+                        Create Free Account
+                    </a>
+                    <a href="dashboard.html" class="btn btn-outline btn-large">
+                        <i class="fas fa-eye"></i>
+                        Try Demo
+                    </a>
+                </div>
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <i class="fas fa-check"></i>
+                        <span>100% Free to Start</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-check"></i>
+                        <span>No Credit Card Required</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Instant Access</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-calculator"></i>
+                        <span>MathGenius Uganda</span>
+                    </div>
+                    <p>Revolutionizing mathematics education for Primary 6 & 7 students across Uganda with engaging, interactive, and curriculum-aligned content.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#topics">Topics</a></li>
+                        <li><a href="#practice">Practice</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Learning</h3>
+                    <ul>
+                        <li><a href="practice.html?grade=6">Primary 6</a></li>
+                        <li><a href="practice.html?grade=7">Primary 7</a></li>
+                        <li><a href="progress.html">Progress Tracking</a></li>
+                        <li><a href="achievements.html">Achievements</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 MathGenius Uganda. All rights reserved. Proudly supporting Uganda's education system.</p>
+                </div>
+                <div class="footer-curriculum">
+                    <p>Aligned with Uganda National Curriculum Development Centre (NCDC) standards</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
